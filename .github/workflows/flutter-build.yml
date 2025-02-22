@@ -89,7 +89,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-
+          ref: ${{ github.ref_name }}
+          
       - name: Restore bridge files
         uses: actions/download-artifact@master
         with:
